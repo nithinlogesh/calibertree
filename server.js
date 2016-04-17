@@ -1862,16 +1862,8 @@ app.use(express.static(__dirname + "/public"))
 
 
 
-
-
-
-
-
-
-
-
-app.listen(2027);
-console.log("Server running on port 2027");
+app.listen(8080);
+console.log("Server running on port 8080");
 
 
 
