@@ -17,40 +17,67 @@
             <p>AC : 234 </p>    <p> PC : 39 </p>
    </span>
    <span class="bannerimageright" style="width: 800px;height: 260px;float: right;">
-   <table><tr>
-          <td style="padding-left: 30px;padding-top: 30px">
-            <ul class="img-list"><li>
-             <a href="#jeyalalitha">
-             <img src="img/jeyalalitha.png" class="img-circle" width="130px" height="130px" alt="img02" >
-             <span class="text-content"> <span>J.Jeyalalitha</span> </span>
-             </a></li> </ul></td>
+   <table>
+
+
+<tr> <td style="padding-left: 30px;padding-top: 40px">
+
+    <ul class="img-list">
+    <li>
+      <a href="#jeyalalitha">
+        <img src="img/jeya.png" class="img-circle" width="130px" height="130px" alt="img02" >
+        <span class="text-content"> <span>J.Jeyalalitha</span> 
+                 <span>32%</span>
+        </span>
+       </a>
+    </li> </ul>
+
+    </td>
         
-         <td style="padding-left: 0px; padding-top: 40px;">
-           <ul class="img-list"><li> 
-              <a href="#karunanithi">
-              <img  src="img/karunanithi.png" class="img-circle"  width="140px" height="115px" alt="img02">
-              <span class="text-content"> <span>M.Karunanithi</span> </span>
-              </a> </li> </ul></td>
 
-        <td style="padding-left: 10px;padding-top: 15px;">
-           <ul class="img-list"><li>
-               <a href="#vijayakanth">
-               <img src="img/vijayakanth.png" class="img-circle" width="130px" height="150px" alt="img02">
-               <span class="text-content"> <span>Vijayakanth</span> </span>
-                </a></li></ul></td>
+    <td style="padding-top: 40px;">
+       <ul class="img-list">
+    <li> 
+           <a href="#karunanithi">
+              <img  src="img/karunanidhi.png" class="img-circle"  width="120px" height="130px" alt="img02">
+        <span class="text-content"> <span>M.Karunanithi</span> 
+        <span>36%</span> </span>
+              
+        </a> </li> </ul></td>
 
-        <td style="padding-top: 25px;">
-            <ul class="img-list"><li>
-                <a href="#anbumani">
-                <img src="img/anbumani.png" class="img-circle" width="150px" height="150px" alt="img02">
-                <span class="text-content"> <span>R.Anbumani</span> </span>
-                </a></li></ul></td>
-        </tr>
+
+
+       <td style="padding-top: 40px;">
+           <ul class="img-list">
+            <li>
+            <a href="#vijayakanth">
+        <img src="img/viji.png" class="img-circle" width="130px" height="130px" alt="img02">
+        <span class="text-content"> <span>Vijayakanth</span>
+        <span>12%%</span> </span>
+        
+        </a></li></ul></td>
+
+      <td style="padding-top: 50px;">
+             <ul class="img-list">  
+        <li>
+        <a href="#anbumani">
+        <img src="img/anbumanii.png" class="img-circle" width="140px" height="130px" alt="img02">
+
+        <span class="text-content"> <span>R.Anbumani</span>
+        <span>7%</span>
+        </span>
+        </a>  </li></ul>
+
+        </td>
+
+
+
+  </tr>
+
+
   
-      <tr><td>
-           <h4 style="color: white;padding-left: 60px;"> Chief Minister candidates</h4>
-      </td></tr>
-   </table></span>
+      
+   </table> </span>
   
 </div> 
 
@@ -90,12 +117,12 @@
             <td style="padding-left: 100px;color: blue"><h3>View candidate details</h3></td></tr>
            <tr>  <td> 
                <label> Select country : </label> 
-               <select ng-model="country">
+               <select ng-model="country" ng-init="country ='India'">>
                          <option value="India"> India </option>
               </select> </td>
               <td style="padding-left: 50px;"> 
                  <label> Select state : </label> 
-                 <select ng-model="state" required>
+                 <select ng-model="state" ng-init="state='Tamilnadu'">>
                   <option value="Tamilnadu" selected="selected">Tamilnadu</option>
                  </select> </td> </tr>
 

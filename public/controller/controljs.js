@@ -83,24 +83,33 @@ sampleApp.controller('homecontroller', function($scope) {
 
 
  sampleApp.controller('ecandidatescontroller', function($scope, $http)
-{
-    $scope.message = 'This is Election candidate  pages';
+{ 
+
+
+
+
+
+
+
+
+
+
+$scope.message = 'This is Election candidate  pages';
 
  //KANCHEEPURAM
     $http.get('/contact1').success(function(response) 
    {
-       $scope.conalandur = response;   //response object contains docs(document data)
-     });
+       $scope.conalandur = response; });
 
      $http.get('/contact2').success(function(response) 
    {
-       $scope.conchengalpattu = response;   //response object contains docs(document data)
+       $scope.conchengalpattu = response;   
      });
 
     
    $http.get('/contact3').success(function(response)
   {
-      $scope.concheyyur = response;   //response object contains docs(document data)
+      $scope.concheyyur = response;   
    });
 
 
@@ -1787,18 +1796,13 @@ sampleApp.controller('homecontroller', function($scope) {
 
 
 
- 
+
 });
 
 
 
-
-
-
-
-
-
-
+ 
+    
 
 
 

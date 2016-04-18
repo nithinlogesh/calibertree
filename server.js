@@ -1,3 +1,4 @@
+
 var express = require('express');
 var app = express();
 
@@ -10,8 +11,7 @@ var mongojs = require('mongojs');
 var db = mongojs('electioncentre', ['ecelectiontn']);
 
 //server push the controll to index.html
-app.use(express.static(__dirname + "/public"))
-
+app.use(express.static(__dirname + "/public"));
 
 
 //kanchipuram 
@@ -19,73 +19,57 @@ app.use(express.static(__dirname + "/public"))
   app.get('/contact1',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Alandur"},function (err,docs){
-    	res.json(docs); });
-  }); 
+    	res.json(docs); });   }); 
 
    app.get('/contact2',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Chengalpattu"},function (err,docs){
-    	res.json(docs); });
-  }); 
+    	res.json(docs); });   }); 
 
   app.get('/contact3',function (req, res)
  {
 	 db.ecelectiontn.find({"constituencyname" : "Cheyyur"},function (err,docs){
-     res.json(docs); });
- }); 
+     res.json(docs); }); }); 
 
   app.get('/contact4',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Kancheepuram"},function (err,docs){
-    	res.json(docs); });
-  }); 
+    	res.json(docs); });  }); 
 
   app.get('/contact5',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Madurantakam"},function (err,docs){
-    	res.json(docs); });
-  });
+    	res.json(docs); });   });
 
    app.get('/contact6',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Pallavaram"},function (err,docs){
-    	res.json(docs); });
-  });
-
+    	res.json(docs); }); });
 
    app.get('/contact7',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Shozhinganallur"},function (err,docs){
-    	res.json(docs); });
-  });
-
+    	res.json(docs); });  });
 
    app.get('/contact8',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Sriperumbudur"},function (err,docs){
-    	res.json(docs); });
-  });
-
+    	res.json(docs); });  });
 
    app.get('/contact9',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Tambaram"},function (err,docs){
-    	res.json(docs); });
-  });
-
+    	res.json(docs); });  });
 
    app.get('/contact10',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Thiruporur"},function (err,docs){
-    	res.json(docs); });
-  });
-
+    	res.json(docs); });});
 
    app.get('/contact11',function (req, res)
  {
 	   db.ecelectiontn.find({"constituencyname" : "Uthiramerur"},function (err,docs){
-    	res.json(docs); });
-  });
+    	res.json(docs); });  });
 
 
 //THIRUVALLUR
@@ -1853,16 +1837,8 @@ app.use(express.static(__dirname + "/public"))
 
 
 
-
-
-
-
-
-
-
-
-
 app.listen(8080);
+
 console.log("Server running on port 8080");
 
 
