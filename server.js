@@ -8,7 +8,11 @@ var bodyParser = require('body-parser');
 var mongojs = require('mongojs');
 
 
-var db = mongojs('electioncentre', ['ecelectiontn']);
+//Database connect to remote server
+var db = mongojs('calibertree:calibertree@ec2-52-38-247-61.us-west-2.compute.amazonaws.com:27017/electioncentre', ['ecelectiontn']);
+
+
+//local terminal  var db = mongojs('electioncentre', ['ecelectiontn']);
 
 //server push the controll to index.html
 app.use(express.static(__dirname + "/public"));
