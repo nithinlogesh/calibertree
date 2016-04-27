@@ -36,7 +36,7 @@
 
            else if (s1.value == "Vellore")
             {
-                   var optionArray = ["|","Arcot|Arcot","Ambur|Ambur","Anaikattu|Anaikattu","Arakkonam|Arakkonam","Gudiyattam|Gudiyattam","Jolarpet|Jolarpet","Katpadi|Katpadi","Kilvaithinankuppam|Kilvaithinankuppam","ranipet|ranipet","Sholingur|Sholingur","Tirupattur|Tirupattur","Vaniyambadi|Vaniyambadi","Vellore|Vellore"];
+                   var optionArray = ["|","Arcot|Arcot","Ambur|Ambur","Anaikattu|Anaikattu","Arakkonam|Arakkonam","Gudiyattam|Gudiyattam","Jolarpet|Jolarpet","Katpadi|Katpadi","Kilvaithinankuppam|Kilvaithinankuppam","Ranipet|Ranipet","Sholingur|Sholingur","Tirupattur|Tirupattur","Vaniyambadi|Vaniyambadi","Vellore|Vellore"];
             }
              else if (s1.value == "Tiruvannamalai")
             {

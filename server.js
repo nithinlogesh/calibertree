@@ -365,7 +365,7 @@ app.use(express.static(__dirname + "/public"));
 
    app.get('/contact50',function (req, res)
  {
-	   db.ecelectiontn.find({"constituencyname" : "ranipet"},function (err,docs){
+	   db.ecelectiontn.find({"constituencyname" : "Ranipet"},function (err,docs){
     	res.json(docs); });
   });
 
@@ -1466,7 +1466,7 @@ app.use(express.static(__dirname + "/public"));
   
    app.get('/contact190',function (req, res)
  {
-	   db.ecelectiontn.find({"constituencyname" : "Vesudevanallur"},function (err,docs){
+	   db.ecelectiontn.find({"constituencyname" : "Vasudevanallur"},function (err,docs){
     	res.json(docs); });
   });
 

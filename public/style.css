@@ -37,7 +37,7 @@ ul.img-list {
 
 ul.img-list li {
   display: inline-block;
-  height: 150px;
+  height: 50px;
   margin: 0 1em 1em 0;
   position: relative;
   width: 150px;
@@ -70,22 +70,73 @@ span.text-content span {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ul.img-list li:hover span.text-content {
   opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+ul.img-list1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list1 li {
+  display: inline-block;
+  height: 50px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 120px;
+}
+
+
+
+span.text-content1 {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 120px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+span.text-content1 span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+ul.img-list1 li:hover span.text-content1 {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
 
 
 
