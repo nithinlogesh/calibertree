@@ -4,8 +4,10 @@ body
 
 	width: 1200px;
 	height: 900px;
-    padding: 30px;
+    padding: 20px;
+    padding-left: 70px;
   cursor:ne-resize;
+  
     
    
 }
@@ -15,9 +17,6 @@ body
    	width: 1200px;
     height: 80px;
 }
-
-
-
 #containerwrap
 {
     width: 1200px;  
@@ -25,6 +24,9 @@ body
     height: auto;
 
 }
+
+
+
 
 
 
@@ -37,24 +39,22 @@ ul.img-list {
 
 ul.img-list li {
   display: inline-block;
-  height: 50px;
+  height: 30px;
   margin: 0 1em 1em 0;
   position: relative;
-  width: 150px;
+  width: 110px;
 }
-
-
 
 span.text-content {
   background: rgba(0,0,0,0.5);
   color: white;
   cursor: pointer;
   display: table;
-  height: 150px;
+  height: 130px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 150px;
+  width: 140px;
   opacity: 0;
   -webkit-transition: opacity 500ms;
   -moz-transition: opacity 500ms;
@@ -162,9 +162,9 @@ ul.img-list1 li:hover span.text-content1 {
 
     color:white;
     clear:both;
-      text-align:center;
+    text-align:center;
     
-    height: 30px;
+    height: 20px;
     width: 1200px
 
 }
@@ -172,16 +172,16 @@ ul.img-list1 li:hover span.text-content1 {
 #footerwrap .footerleft
 {
     width: 400px;
-    height: 30px;
+    height: 20px;
     float: left;
-    background-color: #343333;
+    
    
 }
 
 #footerwrap .footerright
 {
    width: 800px;
-   height: 30px;
+   height: 20px;
    float: right; 
-   background-color: #343333;
+   
 }

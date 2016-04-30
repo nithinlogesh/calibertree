@@ -8,6 +8,95 @@ var sampleApp = angular.module('myapp', []);
 //Uri /ShowOrders -> template show_orders.html and Controller AddOrderController
 
      
+sampleApp.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/home', {
+        templateUrl: 'pages/home.html',
+        controller: 'homecontroller'
+    }).
+      when('/Electioncandidates', {
+        templateUrl: 'pages/Electioncandidates.html',
+        controller: 'ecandidatescontroller'
+    }).
+
+
+      when('/Electionresult', {
+        templateUrl: 'pages/Electionresult.html',
+        controller: 'eresultcontroller'
+      }).
+       when('/Terms', {
+        templateUrl: 'pages/terms.html',
+        controller: 'termscontroller'
+      }).
+
+       when('/Privacy', {
+        templateUrl: 'pages/privacy.html',
+        controller: 'privacycontroller'
+      }).
+ 
+
+      when('/Contact', {
+        templateUrl: 'pages/contactus.html',
+        controller: 'contactcontroller'
+      }).
+ 
+
+
+
+      otherwise({
+        redirectTo: '/home'
+      });
+}]);
+
+
+
+
+
+sampleApp.controller('homecontroller', function($scope) {
+     
+    $scope.message = 'This is HOME pages';
+   
+     
+});
+
+sampleApp.controller('termscontroller', function($scope) {
+     
+    $scope.message = 'This is Terms pages';
+   
+     
+});
+
+
+sampleApp.controller('privacycontroller', function($scope) {
+     
+    $scope.message = 'This is Privacy policy pages';
+   
+     
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
  sampleApp.controller('ecandidatescontroller', function($scope, $http)
@@ -1717,6 +1806,37 @@ $scope.message = 'This is Election candidate  pages';
 
 
 
+});
+
+
+
+
+
+sampleApp.controller('eresultcontroller', function($scope) {
+ 
+    $scope.message = 'This is Election result pages';
+ 
+});
+
+
+sampleApp.controller('logincontroller', function($scope) {
+ 
+    $scope.message = 'This is login pages';
+ 
+});
+
+
+sampleApp.controller('contactcontroller', function($scope) {
+ 
+    $scope.message = 'This is contact controller pages';
+ 
+});
+
+
+sampleApp.controller('onlinecontroller', function($scope) {
+ 
+    $scope.message = 'This is online controller pages';
+ 
 });
 
 
