@@ -1,96 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
     
    <link rel="stylesheet" type="text/css" href="style.css">
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </head>
 
 <body ng-app="myapp">
 
-      <div id="mainwrap">
-   
-         <div id="headerwrap">
-
-           <div class="header1" style="padding-left: 1000px;">
-              <p> <label style="color: #2F2F30"> Welcome </label> [ <label style="color: #0099FF"> CaliberTree  </label>]  </p>
-           </div>
-
-           <div class="header2">
-                <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                 <div class="navbar-header">
-                      <a class="navbar-brand" href="#home"><label style="color: #0099FF"> Election</label><label style="color: #999999"> Center</label></a>
-                 </div>
-
-
-            <ul class="nav navbar-nav">
-                 <li><a href="#home">Home </a></li>
-               <li><a href="#Electioncandidates">Electioncandidates-2016</a></li>
-              <li><a href="#Electionresult">Electionresult-2016</a></li>
-              <li><a href="#Contact">Contactus</a></li>
-                      
+        
+          <header>
            
-                </ul></div>
-               </nav></div>
+                  <p> . </p>
+               </header>
+              
+           <nav>
+             <ul>
+                <li><a href="#home"> <label style="color: #0099FF;"> Election</label><label style="color: #6A6A69"> Center</label></a></li>
+                 
+                   <li style="padding-left: 30px;"> <a href="#home"> Home </a></li>
+                    <li style="padding-left: 20px;"> <a href="#Electioncandidates"> Electioncandidates-2016 </a></li>
+                   <li style="padding-left: 20px;"> <a href="#Electionresult"> Electionresult-2016 </a></li>
+                   <li style="padding-left: 20px;"> <a href="#Contact"> Contactus </a></li>
+                  
+
+               </ul>
+                 <div class="handle">Menu</div>
+               </nav>
 
     
-      </div>
-
-
-
+      
 
 <div id="containerwrap" ng-view>
 
 </div>
 
+<script>
+  $('.handle').on('click', function(){
+        $('nav ul').toggleClass('showing');
+  });
+</script>
+
 
 
 
 <script src="controller/controljs.js" type="text/javascript"></script>
-</div>
 
 
 
 
+   
+
+    <div class="foot">
+
+             <section class="footleft">
+               
+               <hr>
+             <i class="fa fa-copyright" style="text-align: left;">
+
+             <label style="color: #686767">Calibertree Technology 2016 </label> | <a href="#Terms">Terms of use </a> | <a href="#Privacy"> Privacy Policy  </a>
+            
+             </i>
+          
+             </section>
+
+             <aside class="footright">
+
+              <hr>
+          <a href="#home">  Home </a>   
+         <a href="#Electioncandidates" style="padding-left: 10px;">Electioncandidates-2016</a>   
+         <a style="padding-left: 10px"  href="#Electionresult">Electionresult-2016</a>   
+         <a style="padding-left: 10px" href="#contact">ContactUs</a>   
+            
+              
+             </aside>
+             <div> <hr></div>
+             
+      </div>
 
 
 
 
      
-      <div id="footerwrap">
-      
-      </div>
-      	     <span class="footerleft">
-               
-               <hr>
-             <i class="fa fa-copyright" style="text-align: left;">
-
-             <label style="color: #8F9091">Calibertree Technology 2016 </label> | <a href="#Terms">Terms of use </a> | <a href="#Privacy"> Privacy Policy  </a>
-            
-             </i>
-      	 	
-      	     </span>
-
-      	     <span class="footerright" style="padding-left: 280px;">
-
-            
-          <a href="#home" style="color: #78797A">  Home </a>           
-         <a href="#Electioncandidates" style="color: #78797A;padding-left: 5px;">Electioncandidates-2016</a>
-         <a style="padding-left: 5px;color: #78797A"  href="#Electionresult">Electionresult-2016</a> 
-         <a style="padding-left: 5px;color: #78797A" href="#contact">ContactUs</a>
-            
-      	     	
-      	     </span>
+     
              <div> <hr></div>
              
-      </div>
-
-        
-    </div>
+           
+    
 
 
 
