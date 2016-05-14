@@ -8,30 +8,35 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body ng-app="myapp">
 
         
-          <header>
-           
-                  <p> . </p>
-               </header>
+     <header>
               
-           <nav>
-             <ul>
-                <li><a href="#home"> <label style="color: #0099FF;"> Election</label><label style="color: #6A6A69"> Center</label></a></li>
-                 
-                   <li style="padding-left: 30px;"> <a href="#home"> Home </a></li>
-                    <li style="padding-left: 20px;"> <a href="#Electioncandidates"> Electioncandidates-2016 </a></li>
-                   <li style="padding-left: 20px;"> <a href="#Electionresult"> Electionresult-2016 </a></li>
-                   <li style="padding-left: 20px;"> <a href="#Contact"> Contactus </a></li>
+          <section class="dropdown">
+                  <i id="i" class="fa fa-bars" style="font-size:30px;"></i>
+                
+                <nav class="dropdown-content">
+                <ul id="menu">
+                  <li>  <a class="hi" href="#home">Home</a> </li>
+                   <li> <a class="hi" href="#Electioncandidates">Electioncandidates-2016</a> </li>
+                   <li> <a class="hi" href="#Electionresult">Electionresult-2016</a> </li>
+                   <li> <a class="hi" href="#Contact">Contactus</a>  </li> </ul>
+                </nav> 
+                
+         </section>
+         
+         <aside class="logotext">
+                   <h3 class="h3">ELECT LORE</h3>
                   
+         </aside>
 
-               </ul>
-                 <div class="handle">Menu</div>
-               </nav>
-
+    </header>
+              
+          
     
       
 
@@ -39,11 +44,6 @@
 
 </div>
 
-<script>
-  $('.handle').on('click', function(){
-        $('nav ul').toggleClass('showing');
-  });
-</script>
 
 
 
@@ -71,10 +71,10 @@
              <aside class="footright">
 
               <hr>
-          <a href="#home">  Home </a>   
-         <a href="#Electioncandidates" style="padding-left: 10px;">Electioncandidates-2016</a>   
-         <a style="padding-left: 10px"  href="#Electionresult">Electionresult-2016</a>   
-         <a style="padding-left: 10px" href="#contact">ContactUs</a>   
+          <a class="fot" href="#home">  Home </a>   
+         <a class="fot" href="#Electioncandidates" style="padding-left: 10px;">Electioncandidates-2016</a>   
+         <a class="fot" style="padding-left: 10px"  href="#Electionresult">Electionresult-2016</a>   
+         <a class="fot" style="padding-left: 10px" href="#Contact">ContactUs</a>   
             
               
              </aside>
@@ -82,8 +82,7 @@
              
       </div>
 
-
-
+ 
 
      
      
