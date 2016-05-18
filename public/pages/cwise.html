@@ -1,0 +1,3734 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body ng-controller="ecandidatescontroller">
+      
+<div id="containerwrap">
+      
+<div class="banner" style=" position: relative; overflow: auto; background-color: black">
+
+  <section class="bannerleft">
+  
+   <table>
+      <tr><td class="bannerleft1">
+          <h3 style="color: white;"> Tamilnadu Assembly Election-2016</h3></td></tr>
+     
+       <tr><td class="bannerleft2">
+           <h4 style="color: #0099FF;"> Chief Minister Candidates</h4></td></tr>
+     </table>
+    </section>
+
+    <aside class="bannerright">
+     
+     <table>   
+           <tr> <td style="padding-top: 30px;">
+          
+          <ul class="img-list"><li>
+       <img src="img/jeya.png" class="img-circle" width="120px" height="130px" alt="img02" >
+        <span class="text-content"> <span>J.Jeyalalitha</span> </span></li> </ul> </td>
+        
+     <td style="padding-top: 30px;">
+       <ul class="img-list"><li> 
+          <img  src="img/karunanithi.png" class="img-circle"  width="120px" height="135px" alt="img02">
+        <span class="text-content"> <span>M.Karunanithi</span> </span></li> </ul></td>
+
+
+
+       <td style="padding-top: 30px;"><ul class="img-list"><li>
+            <img src="img/viji.png" class="img-circle" width="120px" height="130px" alt="img02">
+        <span class="text-content"> <span>Vijayakanth</span></span></li></ul></td>
+
+      <td style="padding-top: 40px;">
+         <ul class="img-list">  
+        <li><img src="img/anbumanii.png" class="img-circle" width="130px" height="130px" alt="img02">
+          <span class="text-content"> <span>R.Anbumani</span></span></li></ul></td> 
+    </tr>  
+
+
+</table></aside>
+  
+
+
+<script src="controller/modernizr.custom.js" type="text/javascript"></script>
+
+</div>
+
+
+   <div class="candidatetext">
+
+       <div class="ecandidatere1">
+            <h4>View Election Results TN-2016</h4>
+             
+              <nav><ul id="menu1"> 
+               <li> <a  href="#Pwise">Partywise</a> </li>
+               <li> <a  href="#Cwise">Constituencywise</a> </li>
+                <li> <a  href="#CwiseT">ConstituencywiseTrends</a> </li></ul>
+               </nav>          
+      </div>
+
+
+     <div class="ecandidateree2">   
+       
+       <table>
+       
+             <tr><td style="padding-top: 10px;"> 
+                  <label style="padding-left: 40px;font-size: 13px;"> Select District : </label>
+                <select required id="slct1" ng-model="mydist" name="slct1" onchange="populate(this.id,'slct2')">
+                 
+                 <option value="" default selected>District</option>
+
+                 <option value="Chennai">Chennai</option>
+                 <option value="Kancipuram">Kanchipuram</option><option value="Tiruvallur">Tiruvallur</option>
+                 <option value="Cuddalore">Cuddalore</option>
+                 <option value="Villupuram">Villupuram</option> <option value="Vellore">Vellore</option>
+                 <option value="Tiruvannamalai">Tiruvannamalai</option><option value="Salem">Salem</option>
+                 <option value="Namakkal">Namakkal</option><option value="Dharmapuri">Dharmapuri</option>
+                 <option value="Erode">Erode</option><option value="Coimbatore">Coimbatore</option>
+                 <option value="Nilgiris">Nilgiris</option><option value="Thanjavur">Thanjavur</option>
+                 <option value="Nagapattinam">Nagapattinam</option><option value="Tiruvarur">Tiruvarur</option>
+                 <option value="Tiruchirappalli">Tiruchirappalli</option><option value="Karur">Karur</option>
+                 <option value="Perambalur">Perambalur</option><option value="Pudukkottai">Pudukkottai</option> <option value="Madurai">Madurai</option><option value="Theni">Theni</option>
+                <option value="Dindigul">Dindigul</option><option value="Ramanathapuram">Ramanathapuram</option>
+                <option value="Virudhunagar">Virudhunagar</option><option value="Sivagangai">Sivagangai</option>
+                 <option value="Tirunelveli">Tirunelveli</option>                                               <option value="Thoothukkudi">Thoothukudi</option> 
+                 <option value="Kanniyakumari">Kanniyakumari</option>
+                 <option value="Krishnagiri">Krishnagiri</option><option value="Ariyalur">Ariyalur</option>
+                 <option value="Tiruppur">Tiruppur</option> </select> </td></tr>
+
+            <tr>
+                <td style="padding-top: 5px;">
+               <label style="font-size: 13px;"> Select Constituency :  </label>
+               <select ng-model="myVar" id="slct2" name="slct2">
+               <option value="" default selected>Constituency</option>
+               </select> </td></tr> </table><br>
+    </div>
+
+
+
+    <div class="ecandidatesree3">
+  
+   
+    <div ng-switch="myVar">
+    
+      <div ng-switch-when="Alandur">
+            <section class="contentleftre1">   
+               <div ng-repeat="contact1 in conalandur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact1.candidatename}}</td>
+                          <td class="tdd1">{{contact1.partyname}}</td>
+                          <td class="tdd1">{{contact1.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> 
+          
+          </aside>
+
+      </div>
+
+
+      <div ng-switch-when="Chengalpattu">
+            <section class="contentleftre1">   
+               <div ng-repeat="contact2 in conchengalpattu"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact2.candidatename}}</td>
+                          <td class="tdd1">{{contact2.partyname}}</td>
+                          <td class="tdd1">{{contact2.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> 
+          
+          </aside>
+
+      </div>
+
+
+      <div ng-switch-when="Cheyyur">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact3 in concheyyur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact3.candidatename}}</td>
+                          <td class="tdd1">{{contact3.partyname}}</td>
+                          <td class="tdd1">{{contact3.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> 
+          
+          </aside>
+
+      </div>
+
+
+      <div ng-switch-when="Kancheepuram">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact4 in conkancheepuram"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact4.candidatename}}</td>
+                          <td class="tdd1">{{contact4.partyname}}</td>
+                          <td class="tdd1">{{contact4.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> 
+          
+          </aside>
+
+      </div>
+
+
+      <div ng-switch-when="Madurantakam">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact5 in conmadurantakam"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact5.candidatename}}</td>
+                          <td class="tdd1">{{contact5.partyname}}</td>
+                          <td class="tdd1">{{contact5.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> 
+          
+          </aside>
+
+      </div>
+
+
+      <div ng-switch-when="Pallavaram">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact6 in conpallavaram"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact6.candidatename}}</td>
+                          <td class="tdd1">{{contact6.partyname}}</td>
+                          <td class="tdd1">{{contact6.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+        <div ng-switch-when="Shozhinganallur">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact7 in conshozhinganallur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact7.candidatename}}</td>
+                          <td class="tdd1">{{contact7.partyname}}</td>
+                          <td class="tdd1">{{contact7.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+         <div ng-switch-when="Sriperumbudur">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact8 in consriperumbudur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact8.candidatename}}</td>
+                          <td class="tdd1">{{contact8.partyname}}</td>
+                          <td class="tdd1">{{contact8.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+       <div ng-switch-when="Tambaram">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact9 in contambaram"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact9.candidatename}}</td>
+                          <td class="tdd1">{{contact9.partyname}}</td>
+                          <td class="tdd1">{{contact9.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+      <div ng-switch-when="Thiruporur">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact10 in conthiruporur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact10.candidatename}}</td>
+                          <td class="tdd1">{{contact10.partyname}}</td>
+                          <td class="tdd1">{{contact10.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>      
+
+
+
+     <div ng-switch-when="Uthiramerur">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact11 in conuthiramerur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact11.candidatename}}</td>
+                          <td class="tdd1">{{contact11.partyname}}</td>
+                          <td class="tdd1">{{contact11.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+      <div ng-switch-when="Ambattur">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact12 in conambattur"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact12.candidatename}}</td>
+                          <td class="tdd1">{{contact12.partyname}}</td>
+                          <td class="tdd1">{{contact12.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+     <div ng-switch-when="Avadi">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact13 in conavadi"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact13.candidatename}}</td>
+                          <td class="tdd1">{{contact13.partyname}}</td>
+                          <td class="tdd1">{{contact13.votescount}}</td>
+                     </tr><hr></table>
+                   </div>
+            </section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>     
+
+
+
+        <div ng-switch-when="Gummidipoondi">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact14 in congummidipoondi"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact14.candidatename}}</td>
+                          <td class="tdd1">{{contact14.partyname}}</td>
+                          <td class="tdd1">{{contact14.votescount}}</td>
+                     </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+      <div ng-switch-when="Madhavaram">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact15 in conmadhavaram"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact15.candidatename}}</td>
+                          <td class="tdd1">{{contact15.partyname}}</td>
+                          <td class="tdd1">{{contact15.votescount}}</td>
+                     </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Maduravoyal">
+            <section class="contentleftre1">   
+        
+               <div ng-repeat="contact16 in conmaduravoyal"> 
+                  <table class="tab1">
+                      <tr><td class="tdd1">{{contact16.candidatename}}</td>
+                          <td class="tdd1">{{contact16.partyname}}</td>
+                          <td class="tdd1">{{contact16.votescount}}</td>
+                     </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>      
+
+
+
+     <div ng-switch-when="Ponneri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact17 in conponneri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact17.candidatename}}</td>
+              <td class="tdd1">{{contact17.partyname}}</td>
+              <td class="tdd1">{{contact17.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>       
+
+
+      <div ng-switch-when="Poonmallae">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact18 in conpoonmallae"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact18.candidatename}}</td>
+              <td class="tdd1">{{contact18.partyname}}</td>
+              <td class="tdd1">{{contact18.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Thiruvallur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact19 in conthiruvallur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact19.candidatename}}</td>
+              <td class="tdd1">{{contact19.partyname}}</td>
+              <td class="tdd1">{{contact19.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                                                                
+ 
+
+
+
+      <div ng-switch-when="Thiruvottiyur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact20 in conthiruvottiyur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact20.candidatename}}</td>
+              <td class="tdd1">{{contact20.partyname}}</td>
+              <td class="tdd1">{{contact20.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Tiruttani">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact21 in contiruttani"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact21.candidatename}}</td>
+              <td class="tdd1">{{contact21.partyname}}</td>
+              <td class="tdd1">{{contact21.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+      <div ng-switch-when="Bhuvanagiri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact22 in conbhuvanagiri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact22.candidatename}}</td>
+              <td class="tdd1">{{contact22.partyname}}</td>
+              <td class="tdd1">{{contact22.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+      <div ng-switch-when="Chidambaram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact23 in conchidambaram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact23.candidatename}}</td>
+              <td class="tdd1">{{contact23.partyname}}</td>
+              <td class="tdd1">{{contact23.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+      <div ng-switch-when="Kattumannarkoil">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact24 in conkattumannarkoil"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact24.candidatename}}</td>
+              <td class="tdd1">{{contact24.partyname}}</td>
+              <td class="tdd1">{{contact24.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Kurinjipadi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact25 in conkurinjipadi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact25.candidatename}}</td>
+              <td class="tdd1">{{contact25.partyname}}</td>
+              <td class="tdd1">{{contact25.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Neyveli">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact26 in conneyveli"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact26.candidatename}}</td>
+              <td class="tdd1">{{contact26.partyname}}</td>
+              <td class="tdd1">{{contact26.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+       <div ng-switch-when="Panruti">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact27 in conpanruti"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact27.candidatename}}</td>
+              <td class="tdd1">{{contact27.partyname}}</td>
+              <td class="tdd1">{{contact27.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Tittakudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact28 in contittakudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact28.candidatename}}</td>
+              <td class="tdd1">{{contact28.partyname}}</td>
+              <td class="tdd1">{{contact28.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+     <div ng-switch-when="Vriddhachalam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact29 in convriddhachalam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact29.candidatename}}</td>
+              <td class="tdd1">{{contact29.partyname}}</td>
+              <td class="tdd1">{{contact29.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Cuddalore">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact30 in concuddalore"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact30.candidatename}}</td>
+              <td class="tdd1">{{contact30.partyname}}</td>
+              <td class="tdd1">{{contact30.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Gingee">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact31 in congingee"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact31.candidatename}}</td>
+              <td class="tdd1">{{contact31.partyname}}</td>
+              <td class="tdd1">{{contact31.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Kallakurichi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact32 in conkallakurichi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact32.candidatename}}</td>
+              <td class="tdd1">{{contact32.partyname}}</td>
+              <td class="tdd1">{{contact32.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+    <div ng-switch-when="Mailam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact33 in conmailam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact33.candidatename}}</td>
+              <td class="tdd1">{{contact33.partyname}}</td>
+              <td class="tdd1">{{contact33.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+    <div ng-switch-when="Rishivanthiyam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact34 in conrishivanthiyam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact34.candidatename}}</td>
+              <td class="tdd1">{{contact34.partyname}}</td>
+              <td class="tdd1">{{contact34.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Sankarapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact35 in consankarapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact35.candidatename}}</td>
+              <td class="tdd1">{{contact35.partyname}}</td>
+              <td class="tdd1">{{contact35.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+    <div ng-switch-when="Tindivanam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact36 in contindivanam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact36.candidatename}}</td>
+              <td class="tdd1">{{contact36.partyname}}</td>
+              <td class="tdd1">{{contact36.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+     <div ng-switch-when="Tirukoilur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact37 in contirukoilur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact37.candidatename}}</td>
+              <td class="tdd1">{{contact37.partyname}}</td>
+              <td class="tdd1">{{contact37.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+    <div ng-switch-when="Ulundurpettai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact38 in conulundurpettai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact38.candidatename}}</td>
+              <td class="tdd1">{{contact38.partyname}}</td>
+              <td class="tdd1">{{contact38.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     <div ng-switch-when="Vanur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact39 in convanur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact39.candidatename}}</td>
+              <td class="tdd1">{{contact39.partyname}}</td>
+              <td class="tdd1">{{contact39.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+
+   <div ng-switch-when="Vikravandi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact40 in convikravandi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact40.candidatename}}</td>
+              <td class="tdd1">{{contact40.partyname}}</td>
+              <td class="tdd1">{{contact40.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+    <div ng-switch-when="Villupuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact41 in convillupuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact41.candidatename}}</td>
+              <td class="tdd1">{{contact41.partyname}}</td>
+              <td class="tdd1">{{contact41.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+    <div ng-switch-when="Arcot">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact42 in conarcot"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact42.candidatename}}</td>
+              <td class="tdd1">{{contact42.partyname}}</td>
+              <td class="tdd1">{{contact42.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Ambur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact43 in conambur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact43.candidatename}}</td>
+              <td class="tdd1">{{contact43.partyname}}</td>
+              <td class="tdd1">{{contact43.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+    <div ng-switch-when="Anaikattu">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact44 in conanaikattu"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact44.candidatename}}</td>
+              <td class="tdd1">{{contact44.partyname}}</td>
+              <td class="tdd1">{{contact44.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Arakkonam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact45 in conarakkonam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact45.candidatename}}</td>
+              <td class="tdd1">{{contact45.partyname}}</td>
+              <td class="tdd1">{{contact45.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     <div ng-switch-when="Gudiyattam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact46 in congudiyattam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact46.candidatename}}</td>
+              <td class="tdd1">{{contact46.partyname}}</td>
+              <td class="tdd1">{{contact46.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+    <div ng-switch-when="Jolarpet">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact47 in conjolarpet"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact47.candidatename}}</td>
+              <td class="tdd1">{{contact47.partyname}}</td>
+              <td class="tdd1">{{contact47.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Katpadi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact48 in conkatpadi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact48.candidatename}}</td>
+              <td class="tdd1">{{contact48.partyname}}</td>
+              <td class="tdd1">{{contact48.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Kilvaithinankuppam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact49 in conkilvaithinankuppam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact49.candidatename}}</td>
+              <td class="tdd1">{{contact49.partyname}}</td>
+              <td class="tdd1">{{contact49.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Ranipet">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact50 in conranipet"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact50.candidatename}}</td>
+              <td class="tdd1">{{contact50.partyname}}</td>
+              <td class="tdd1">{{contact50.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Sholingur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact51 in consholingur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact51.candidatename}}</td>
+              <td class="tdd1">{{contact51.partyname}}</td>
+              <td class="tdd1">{{contact51.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Tirupattur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact52 in contirupattur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact52.candidatename}}</td>
+              <td class="tdd1">{{contact52.partyname}}</td>
+              <td class="tdd1">{{contact52.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+       <div ng-switch-when="Vaniyambadi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact53 in convaniyambadi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact53.candidatename}}</td>
+              <td class="tdd1">{{contact53.partyname}}</td>
+              <td class="tdd1">{{contact53.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Vellore">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact54 in convellore"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact54.candidatename}}</td>
+              <td class="tdd1">{{contact54.partyname}}</td>
+              <td class="tdd1">{{contact54.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     <div ng-switch-when="Arani">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact55 in conarani"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact55.candidatename}}</td>
+              <td class="tdd1">{{contact55.partyname}}</td>
+              <td class="tdd1">{{contact55.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Chengam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact56 in conchengam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact56.candidatename}}</td>
+              <td class="tdd1">{{contact56.partyname}}</td>
+              <td class="tdd1">{{contact56.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Cheyyar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact57 in concheyyar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact57.candidatename}}</td>
+              <td class="tdd1">{{contact57.partyname}}</td>
+              <td class="tdd1">{{contact57.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Kalasapakkam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact58 in conkalasapakkam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact58.candidatename}}</td>
+              <td class="tdd1">{{contact58.partyname}}</td>
+              <td class="tdd1">{{contact58.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+     <div ng-switch-when="Polur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact59 in conpolur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact59.candidatename}}</td>
+              <td class="tdd1">{{contact59.partyname}}</td>
+              <td class="tdd1">{{contact59.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+    <div ng-switch-when="Tiruvannamalai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact60 in contiruvannamalai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact60.candidatename}}</td>
+              <td class="tdd1">{{contact60.partyname}}</td>
+              <td class="tdd1">{{contact60.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Vandavasi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact61 in convandavasi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact61.candidatename}}</td>
+              <td class="tdd1">{{contact61.partyname}}</td>
+              <td class="tdd1">{{contact61.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Kilpennathur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact62 in conkilpennathur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact62.candidatename}}</td>
+              <td class="tdd1">{{contact62.partyname}}</td>
+              <td class="tdd1">{{contact62.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     <div ng-switch-when="Attur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact63 in conattur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact63.candidatename}}</td>
+              <td class="tdd1">{{contact63.partyname}}</td>
+              <td class="tdd1">{{contact63.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+    <div ng-switch-when="Edappadi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact64 in conedappadi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact64.candidatename}}</td>
+              <td class="tdd1">{{contact64.partyname}}</td>
+              <td class="tdd1">{{contact64.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Gangavalli">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact65 in congangavalli"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact65.candidatename}}</td>
+              <td class="tdd1">{{contact65.partyname}}</td>
+              <td class="tdd1">{{contact65.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Mettur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact66 in conmettur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact66.candidatename}}</td>
+              <td class="tdd1">{{contact66.partyname}}</td>
+              <td class="tdd1">{{contact66.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Omalur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact67 in conomalur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact67.candidatename}}</td>
+              <td class="tdd1">{{contact67.partyname}}</td>
+              <td class="tdd1">{{contact67.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+    <div ng-switch-when="Salemnorth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact68 in consalemnorth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact68.candidatename}}</td>
+              <td class="tdd1">{{contact68.partyname}}</td>
+              <td class="tdd1">{{contact68.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+   <div ng-switch-when="Salemsouth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact69 in consalemsouth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact69.candidatename}}</td>
+              <td class="tdd1">{{contact69.partyname}}</td>
+              <td class="tdd1">{{contact69.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+   <div ng-switch-when="Salemwest">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact70 in consalemwest"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact70.candidatename}}</td>
+              <td class="tdd1">{{contact70.partyname}}</td>
+              <td class="tdd1">{{contact70.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>     
+
+
+
+   <div ng-switch-when="Sankagiri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact71 in consankagiri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact71.candidatename}}</td>
+              <td class="tdd1">{{contact71.partyname}}</td>
+              <td class="tdd1">{{contact71.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     <div ng-switch-when="Veerapandi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact72 in conveerapandi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact72.candidatename}}</td>
+              <td class="tdd1">{{contact72.partyname}}</td>
+              <td class="tdd1">{{contact72.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+    <div ng-switch-when="Yercaud">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact73 in conyercaud"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact73.candidatename}}</td>
+              <td class="tdd1">{{contact73.partyname}}</td>
+              <td class="tdd1">{{contact73.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+    <div ng-switch-when="Kumarapalayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact74 in conkumarapalayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact74.candidatename}}</td>
+              <td class="tdd1">{{contact74.partyname}}</td>
+              <td class="tdd1">{{contact74.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+   <div ng-switch-when="Namakkal">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact75 in connamakkal"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact75.candidatename}}</td>
+              <td class="tdd1">{{contact75.partyname}}</td>
+              <td class="tdd1">{{contact75.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>       
+
+
+
+     <div ng-switch-when="Paramathivelur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact76 in conparamathivelur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact76.candidatename}}</td>
+              <td class="tdd1">{{contact76.partyname}}</td>
+              <td class="tdd1">{{contact76.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+     <div ng-switch-when="Rasipuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact77 in conrasipuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact77.candidatename}}</td>
+              <td class="tdd1">{{contact77.partyname}}</td>
+              <td class="tdd1">{{contact77.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Senthamangalam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact78 in consenthamangalam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact78.candidatename}}</td>
+              <td class="tdd1">{{contact78.partyname}}</td>
+              <td class="tdd1">{{contact78.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+     <div ng-switch-when="Tiruchengodu">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact79 in contiruchengodu"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact79.candidatename}}</td>
+              <td class="tdd1">{{contact79.partyname}}</td>
+              <td class="tdd1">{{contact79.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Dharmapuri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact80 in condharmapuri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact80.candidatename}}</td>
+              <td class="tdd1">{{contact80.partyname}}</td>
+              <td class="tdd1">{{contact80.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+      <div ng-switch-when="Harur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact81 in conharur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact81.candidatename}}</td>
+              <td class="tdd1">{{contact81.partyname}}</td>
+              <td class="tdd1">{{contact81.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+   <div ng-switch-when="Palacodu">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact82 in conpalacodu"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact82.candidatename}}</td>
+              <td class="tdd1">{{contact82.partyname}}</td>
+              <td class="tdd1">{{contact82.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+    <div ng-switch-when="Pappireddippatti">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact83 in conpappireddippatti"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact83.candidatename}}</td>
+              <td class="tdd1">{{contact83.partyname}}</td>
+              <td class="tdd1">{{contact83.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+      <div ng-switch-when="Pennagaram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact84 in conpennagaram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact84.candidatename}}</td>
+              <td class="tdd1">{{contact84.partyname}}</td>
+              <td class="tdd1">{{contact84.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>     
+
+
+
+      <div ng-switch-when="Anthiyur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact85 in conanthiyur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact85.candidatename}}</td>
+              <td class="tdd1">{{contact85.partyname}}</td>
+              <td class="tdd1">{{contact85.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+
+    <div ng-switch-when="Bhavani">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact86 in conbhavani"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact86.candidatename}}</td>
+              <td class="tdd1">{{contact86.partyname}}</td>
+              <td class="tdd1">{{contact86.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+    <div ng-switch-when="Bhavanisagar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact87 in conbhavanisagar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact87.candidatename}}</td>
+              <td class="tdd1">{{contact87.partyname}}</td>
+              <td class="tdd1">{{contact87.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+   <div ng-switch-when="Erodeeast">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact88 in conerodeeast"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact88.candidatename}}</td>
+              <td class="tdd1">{{contact88.partyname}}</td>
+              <td class="tdd1">{{contact88.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+    <div ng-switch-when="Erodewest">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact89 in conerodewest"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact89.candidatename}}</td>
+              <td class="tdd1">{{contact89.partyname}}</td>
+              <td class="tdd1">{{contact89.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+    <div ng-switch-when="Gobichettipalayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact90 in congobichettipalayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact90.candidatename}}</td>
+              <td class="tdd1">{{contact90.partyname}}</td>
+              <td class="tdd1">{{contact90.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>        
+
+
+
+    <div ng-switch-when="Modakkurichi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact91 in conmodakkurichi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact91.candidatename}}</td>
+              <td class="tdd1">{{contact91.partyname}}</td>
+              <td class="tdd1">{{contact91.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+   <div ng-switch-when="Perundurai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact92 in conperundurai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact92.candidatename}}</td>
+              <td class="tdd1">{{contact92.partyname}}</td>
+              <td class="tdd1">{{contact92.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+ <div ng-switch-when="Coimbatorenorth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact93 in concoimbatorenorth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact93.candidatename}}</td>
+              <td class="tdd1">{{contact93.partyname}}</td>
+              <td class="tdd1">{{contact93.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+     <div ng-switch-when="Coimbatoresouth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact94 in concoimbatoresouth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact94.candidatename}}</td>
+              <td class="tdd1">{{contact94.partyname}}</td>
+              <td class="tdd1">{{contact94.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+       <div ng-switch-when="Kavundampalayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact95 in conkavundampalayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact95.candidatename}}</td>
+              <td class="tdd1">{{contact95.partyname}}</td>
+              <td class="tdd1">{{contact95.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Kinathukadavu">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact96 in conkinathukadavu"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact96.candidatename}}</td>
+              <td class="tdd1">{{contact96.partyname}}</td>
+              <td class="tdd1">{{contact96.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+     <div ng-switch-when="Mettuppalayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact97 in conmettuppalayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact97.candidatename}}</td>
+              <td class="tdd1">{{contact97.partyname}}</td>
+              <td class="tdd1">{{contact97.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>       
+
+
+
+     <div ng-switch-when="Pollachi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact98 in conpollachi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact98.candidatename}}</td>
+              <td class="tdd1">{{contact98.partyname}}</td>
+              <td class="tdd1">{{contact98.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+    <div ng-switch-when="Singanallur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact99 in consinganallur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact99.candidatename}}</td>
+              <td class="tdd1">{{contact99.partyname}}</td>
+              <td class="tdd1">{{contact99.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     <div ng-switch-when="Sulur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact100 in consulur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact100.candidatename}}</td>
+              <td class="tdd1">{{contact100.partyname}}</td>
+              <td class="tdd1">{{contact100.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+    <div ng-switch-when="Thondamuthur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact101 in conthondamuthur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact101.candidatename}}</td>
+              <td class="tdd1">{{contact101.partyname}}</td>
+              <td class="tdd1">{{contact101.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+    <div ng-switch-when="Valparai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact102 in convalparai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact102.candidatename}}</td>
+              <td class="tdd1">{{contact102.partyname}}</td>
+              <td class="tdd1">{{contact102.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>        
+
+
+
+     <div ng-switch-when="Coonoor">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact103 in concoonoor"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact103.candidatename}}</td>
+              <td class="tdd1">{{contact103.partyname}}</td>
+              <td class="tdd1">{{contact103.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+     <div ng-switch-when="Gudalur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact104 in congudalur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact104.candidatename}}</td>
+              <td class="tdd1">{{contact104.partyname}}</td>
+              <td class="tdd1">{{contact104.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+   <div ng-switch-when="Udhagamandalam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact105 in conudhagamandalam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact105.candidatename}}</td>
+              <td class="tdd1">{{contact105.partyname}}</td>
+              <td class="tdd1">{{contact105.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+     <div ng-switch-when="Kumbakonam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact106 in conkumbakonam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact106.candidatename}}</td>
+              <td class="tdd1">{{contact106.partyname}}</td>
+              <td class="tdd1">{{contact106.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+       <div ng-switch-when="Orathanadu">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact107 in conoranthanadu"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact107.candidatename}}</td>
+              <td class="tdd1">{{contact107.partyname}}</td>
+              <td class="tdd1">{{contact107.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+       <div ng-switch-when="Papanasam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact108 in conpapanasam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact108.candidatename}}</td>
+              <td class="tdd1">{{contact108.partyname}}</td>
+              <td class="tdd1">{{contact108.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+       <div ng-switch-when="Pattukkottai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact109 in conpattukkottai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact109.candidatename}}</td>
+              <td class="tdd1">{{contact109.partyname}}</td>
+              <td class="tdd1">{{contact109.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+       <div ng-switch-when="Peravurani">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact110 in conperavurani"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact110.candidatename}}</td>
+              <td class="tdd1">{{contact110.partyname}}</td>
+              <td class="tdd1">{{contact110.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Thanjavur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact111 in conthanjavur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact111.candidatename}}</td>
+              <td class="tdd1">{{contact111.partyname}}</td>
+              <td class="tdd1">{{contact111.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          </aside> </div>  
+
+
+
+         <div ng-switch-when="Thiruvaiyaru">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact112 in conthiruvaiyaru"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact112.candidatename}}</td>
+              <td class="tdd1">{{contact112.partyname}}</td>
+              <td class="tdd1">{{contact112.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+          <div ng-switch-when="Thiruvidaimarudur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact113 in conthiruvidaimarudur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact113.candidatename}}</td>
+              <td class="tdd1">{{contact113.partyname}}</td>
+              <td class="tdd1">{{contact113.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Kilvelur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact114 in conkilvelur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact114.candidatename}}</td>
+              <td class="tdd1">{{contact114.partyname}}</td>
+              <td class="tdd1">{{contact114.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Mayiladuthurai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact115 in conmayiladuthurai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact115.candidatename}}</td>
+              <td class="tdd1">{{contact115.partyname}}</td>
+              <td class="tdd1">{{contact115.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+        <div ng-switch-when="Nagapattinam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact116 in connagapattinam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact116.candidatename}}</td>
+              <td class="tdd1">{{contact116.partyname}}</td>
+              <td class="tdd1">{{contact116.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Poompuhar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact117 in conpoonpuhar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact117.candidatename}}</td>
+              <td class="tdd1">{{contact117.partyname}}</td>
+              <td class="tdd1">{{contact117.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+
+       <div ng-switch-when="Sirkazhi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact118 in consirkazhi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact118.candidatename}}</td>
+              <td class="tdd1">{{contact118.partyname}}</td>
+              <td class="tdd1">{{contact118.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+         <div ng-switch-when="Vedaranyam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact119 in convedaranyam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact119.candidatename}}</td>
+              <td class="tdd1">{{contact119.partyname}}</td>
+              <td class="tdd1">{{contact119.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+         <div ng-switch-when="Mannargudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact120 in conmannargudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact120.candidatename}}</td>
+              <td class="tdd1">{{contact120.partyname}}</td>
+              <td class="tdd1">{{contact120.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+         <div ng-switch-when="Nannilam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact121 in connannilam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact121.candidatename}}</td>
+              <td class="tdd1">{{contact121.partyname}}</td>
+              <td class="tdd1">{{contact121.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Thiruthuraipoondi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact122 in conthiruthuraipoondi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact122.candidatename}}</td>
+              <td class="tdd1">{{contact122.partyname}}</td>
+              <td class="tdd1">{{contact122.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+         <div ng-switch-when="Thiruvarur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact123 in conthiruvarur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact123.candidatename}}</td>
+              <td class="tdd1">{{contact123.partyname}}</td>
+              <td class="tdd1">{{contact123.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+          <div ng-switch-when="Lalgudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact124 in conlalgudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact124.candidatename}}</td>
+              <td class="tdd1">{{contact124.partyname}}</td>
+              <td class="tdd1">{{contact124.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+         <div ng-switch-when="Manachanallur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact125 in conmanachanallur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact125.candidatename}}</td>
+              <td class="tdd1">{{contact125.partyname}}</td>
+              <td class="tdd1">{{contact125.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+       <div ng-switch-when="Manapparai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact126 in conmanapparai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact126.candidatename}}</td>
+              <td class="tdd1">{{contact126.partyname}}</td>
+              <td class="tdd1">{{contact126.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Musiri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact127 in conmusiri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact127.candidatename}}</td>
+              <td class="tdd1">{{contact127.partyname}}</td>
+              <td class="tdd1">{{contact127.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+        <div ng-switch-when="Srirangam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact128 in consrirangam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact128.candidatename}}</td>
+              <td class="tdd1">{{contact128.partyname}}</td>
+              <td class="tdd1">{{contact128.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Thiruverumbur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact129 in conthiruverumbur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact129.candidatename}}</td>
+              <td class="tdd1">{{contact129.partyname}}</td>
+              <td class="tdd1">{{contact129.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>     
+
+
+
+        <div ng-switch-when="Thuraiyur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact130 in conthuraiyur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact130.candidatename}}</td>
+              <td class="tdd1">{{contact130.partyname}}</td>
+              <td class="tdd1">{{contact130.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Tiruchirappallieast">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact131 in contiruchirappallieast"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact131.candidatename}}</td>
+              <td class="tdd1">{{contact131.partyname}}</td>
+              <td class="tdd1">{{contact131.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Tiruchirappalliwest">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact132 in contiruchirappalliwest"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact132.candidatename}}</td>
+              <td class="tdd1">{{contact132.partyname}}</td>
+              <td class="tdd1">{{contact132.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Aravakurichi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact133 in conaravakurichi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact133.candidatename}}</td>
+              <td class="tdd1">{{contact133.partyname}}</td>
+              <td class="tdd1">{{contact133.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+      <div ng-switch-when="Karur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact134 in conkarur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact134.candidatename}}</td>
+              <td class="tdd1">{{contact134.partyname}}</td>
+              <td class="tdd1">{{contact134.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Krishnarayapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact135 in conkrishnarayapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact135.candidatename}}</td>
+              <td class="tdd1">{{contact135.partyname}}</td>
+              <td class="tdd1">{{contact135.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Kulithalai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact136 in conkulithalai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact136.candidatename}}</td>
+              <td class="tdd1">{{contact136.partyname}}</td>
+              <td class="tdd1">{{contact136.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Kunnam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact137 in conkunnam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact137.candidatename}}</td>
+              <td class="tdd1">{{contact137.partyname}}</td>
+              <td class="tdd1">{{contact137.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+        <div ng-switch-when="Alangudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact139 in conalangudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact139.candidatename}}</td>
+              <td class="tdd1">{{contact139.partyname}}</td>
+              <td class="tdd1">{{contact139.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+
+        <div ng-switch-when="Aranthangi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact140 in conaranthangi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact140.candidatename}}</td>
+              <td class="tdd1">{{contact140.partyname}}</td>
+              <td class="tdd1">{{contact140.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>      
+
+
+
+        <div ng-switch-when="Gandharvakottai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact141 in congandharvakottai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact141.candidatename}}</td>
+              <td class="tdd1">{{contact141.partyname}}</td>
+              <td class="tdd1">{{contact141.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+      <div ng-switch-when="Pudukkottai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact142 in conpudukkottai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact142.candidatename}}</td>
+              <td class="tdd1">{{contact142.partyname}}</td>
+              <td class="tdd1">{{contact142.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+       <div ng-switch-when="Thirumayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact143 in conthirumayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact143.candidatename}}</td>
+              <td class="tdd1">{{contact143.partyname}}</td>
+              <td class="tdd1">{{contact143.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Viralimalai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact144 in conviralimalai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact144.candidatename}}</td>
+              <td class="tdd1">{{contact144.partyname}}</td>
+              <td class="tdd1">{{contact144.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Maduraicentral">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact145 in conmaduraicentral"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact145.candidatename}}</td>
+              <td class="tdd1">{{contact145.partyname}}</td>
+              <td class="tdd1">{{contact145.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Maduraieast">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact146 in conmaduraieast"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact146.candidatename}}</td>
+              <td class="tdd1">{{contact146.partyname}}</td>
+              <td class="tdd1">{{contact146.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Madurainorth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact147 in conmadurainorth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact147.candidatename}}</td>
+              <td class="tdd1">{{contact147.partyname}}</td>
+              <td class="tdd1">{{contact147.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Maduraisouth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact148 in conmaduraisouth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact148.candidatename}}</td>
+              <td class="tdd1">{{contact148.partyname}}</td>
+              <td class="tdd1">{{contact148.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+        <div ng-switch-when="Maduraiwest">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact149 in conmaduraiwest"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact149.candidatename}}</td>
+              <td class="tdd1">{{contact149.partyname}}</td>
+              <td class="tdd1">{{contact149.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Melur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact150 in conmelur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact150.candidatename}}</td>
+              <td class="tdd1">{{contact150.partyname}}</td>
+              <td class="tdd1">{{contact150.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Sholavandan">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact151 in consholavandan"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact151.candidatename}}</td>
+              <td class="tdd1">{{contact151.partyname}}</td>
+              <td class="tdd1">{{contact151.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Thirumangalam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact152 in conthirumangalam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact152.candidatename}}</td>
+              <td class="tdd1">{{contact152.partyname}}</td>
+              <td class="tdd1">{{contact152.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+     
+       <div ng-switch-when="Thiruparankundram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact153 in conthiruparankundram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact153.candidatename}}</td>
+              <td class="tdd1">{{contact153.partyname}}</td>
+              <td class="tdd1">{{contact153.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+
+       <div ng-switch-when="Usilampatti">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact154 in conusilampatti"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact154.candidatename}}</td>
+              <td class="tdd1">{{contact154.partyname}}</td>
+              <td class="tdd1">{{contact154.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Andipatti">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact155 in conandipatti"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact155.candidatename}}</td>
+              <td class="tdd1">{{contact155.partyname}}</td>
+              <td class="tdd1">{{contact155.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+         <div ng-switch-when="Bodinayakanur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact156 in conbodinayakanur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact156.candidatename}}</td>
+              <td class="tdd1">{{contact156.partyname}}</td>
+              <td class="tdd1">{{contact156.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Cumbum">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact157 in concumbum"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact157.candidatename}}</td>
+              <td class="tdd1">{{contact157.partyname}}</td>
+              <td class="tdd1">{{contact157.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+
+         <div ng-switch-when="Periyakulam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact158 in conperiyakulam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact158.candidatename}}</td>
+              <td class="tdd1">{{contact158.partyname}}</td>
+              <td class="tdd1">{{contact158.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Athoor">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact159 in conathoor"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact159.candidatename}}</td>
+              <td class="tdd1">{{contact159.partyname}}</td>
+              <td class="tdd1">{{contact159.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+         <div ng-switch-when="Dindigul">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact160 in condindigul"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact160.candidatename}}</td>
+              <td class="tdd1">{{contact160.partyname}}</td>
+              <td class="tdd1">{{contact160.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>     
+
+
+
+       <div ng-switch-when="Natham">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact161 in connatham"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact161.candidatename}}</td>
+              <td class="tdd1">{{contact161.partyname}}</td>
+              <td class="tdd1">{{contact161.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>      
+
+
+
+        <div ng-switch-when="Nilakkottai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact162 in connilakkottai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact162.candidatename}}</td>
+              <td class="tdd1">{{contact162.partyname}}</td>
+              <td class="tdd1">{{contact162.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>     
+
+
+
+       <div ng-switch-when="Oddanchatram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact163 in conoddanchatram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact163.candidatename}}</td>
+              <td class="tdd1">{{contact163.partyname}}</td>
+              <td class="tdd1">{{contact163.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Palani">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact164 in conpalani"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact164.candidatename}}</td>
+              <td class="tdd1">{{contact164.partyname}}</td>
+              <td class="tdd1">{{contact164.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+         <div ng-switch-when="Vedasandur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact165 in convedasandur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact165.candidatename}}</td>
+              <td class="tdd1">{{contact165.partyname}}</td>
+              <td class="tdd1">{{contact165.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Mudhukulathur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact166 in conmudhukulathur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact166.candidatename}}</td>
+              <td class="tdd1">{{contact166.partyname}}</td>
+              <td class="tdd1">{{contact166.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+          <div ng-switch-when="Paramakudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact167 in conparamakudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact167.candidatename}}</td>
+              <td class="tdd1">{{contact167.partyname}}</td>
+              <td class="tdd1">{{contact167.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Ramanathapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact168 in conramanathapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact168.candidatename}}</td>
+              <td class="tdd1">{{contact168.partyname}}</td>
+              <td class="tdd1">{{contact168.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+      <div ng-switch-when="Tiruvadanai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact169 in contiruvadanai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact169.candidatename}}</td>
+              <td class="tdd1">{{contact169.partyname}}</td>
+              <td class="tdd1">{{contact169.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Aruppukottai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact170 in conaruppukkottai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact170.candidatename}}</td>
+              <td class="tdd1">{{contact170.partyname}}</td>
+              <td class="tdd1">{{contact170.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+        <div ng-switch-when="Rajapalayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact171 in conrajapalayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact171.candidatename}}</td>
+              <td class="tdd1">{{contact171.partyname}}</td>
+              <td class="tdd1">{{contact171.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Sattur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact172 in consattur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact172.candidatename}}</td>
+              <td class="tdd1">{{contact172.partyname}}</td>
+              <td class="tdd1">{{contact172.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+        <div ng-switch-when="Sivakasi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact173 in consivakasi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact173.candidatename}}</td>
+              <td class="tdd1">{{contact173.partyname}}</td>
+              <td class="tdd1">{{contact173.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Srivilliputhur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact174 in consrivilliputhur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact174.candidatename}}</td>
+              <td class="tdd1">{{contact174.partyname}}</td>
+              <td class="tdd1">{{contact174.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+      <div ng-switch-when="Tiruchuli">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact175 in contiruchuli"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact175.candidatename}}</td>
+              <td class="tdd1">{{contact175.partyname}}</td>
+              <td class="tdd1">{{contact175.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+        <div ng-switch-when="Virudhunagar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact176 in convirudhunagar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact176.candidatename}}</td>
+              <td class="tdd1">{{contact176.partyname}}</td>
+              <td class="tdd1">{{contact176.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Karaikudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact177 in conkaraikudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact177.candidatename}}</td>
+              <td class="tdd1">{{contact177.partyname}}</td>
+              <td class="tdd1">{{contact177.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Manamadurai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact178 in conmanamadurai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact178.candidatename}}</td>
+              <td class="tdd1">{{contact178.partyname}}</td>
+              <td class="tdd1">{{contact178.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Sivagangai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact179 in consivagangai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact179.candidatename}}</td>
+              <td class="tdd1">{{contact179.partyname}}</td>
+              <td class="tdd1">{{contact179.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Tiruppattur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact180 in contiruppattur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact180.candidatename}}</td>
+              <td class="tdd1">{{contact180.partyname}}</td>
+              <td class="tdd1">{{contact180.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+      <div ng-switch-when="Alangulam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact181 in conalangulam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact181.candidatename}}</td>
+              <td class="tdd1">{{contact181.partyname}}</td>
+              <td class="tdd1">{{contact181.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Ambasamudram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact182 in conambasamudram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact182.candidatename}}</td>
+              <td class="tdd1">{{contact182.partyname}}</td>
+              <td class="tdd1">{{contact182.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Kadayanallur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact183 in conkadayanallur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact183.candidatename}}</td>
+              <td class="tdd1">{{contact183.partyname}}</td>
+              <td class="tdd1">{{contact183.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+        <div ng-switch-when="Nanguneri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact184 in connanguneri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact184.candidatename}}</td>
+              <td class="tdd1">{{contact184.partyname}}</td>
+              <td class="tdd1">{{contact184.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Palayamkottai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact185 in conpalayamkottai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact185.candidatename}}</td>
+              <td class="tdd1">{{contact185.partyname}}</td>
+              <td class="tdd1">{{contact185.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Radhapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact186 in conradhapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact186.candidatename}}</td>
+              <td class="tdd1">{{contact186.partyname}}</td>
+              <td class="tdd1">{{contact186.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Sankarankovil">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact187 in consankarankovil"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact187.candidatename}}</td>
+              <td class="tdd1">{{contact187.partyname}}</td>
+              <td class="tdd1">{{contact187.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                                                                                                          
+
+
+       <div ng-switch-when="Tenkasi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact188 in contenkasi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact188.candidatename}}</td>
+              <td class="tdd1">{{contact188.partyname}}</td>
+              <td class="tdd1">{{contact188.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Tirunelveli">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact189 in contirunelveli"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact189.candidatename}}</td>
+              <td class="tdd1">{{contact189.partyname}}</td>
+              <td class="tdd1">{{contact189.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>       
+
+
+
+        <div ng-switch-when="Vasudevanallur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact190 in convasudevanallur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact190.candidatename}}</td>
+              <td class="tdd1">{{contact190.partyname}}</td>
+              <td class="tdd1">{{contact190.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Kovilpatti">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact191 in conkovilpatti"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact191.candidatename}}</td>
+              <td class="tdd1">{{contact191.partyname}}</td>
+              <td class="tdd1">{{contact191.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Ottapidaram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact192 in conottapidaram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact192.candidatename}}</td>
+              <td class="tdd1">{{contact192.partyname}}</td>
+              <td class="tdd1">{{contact192.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Srivaikuntam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact193 in consrivaikuntam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact193.candidatename}}</td>
+              <td class="tdd1">{{contact193.partyname}}</td>
+              <td class="tdd1">{{contact193.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Thoothukkudi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact194 in conthoothukkudi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact194.candidatename}}</td>
+              <td class="tdd1">{{contact194.partyname}}</td>
+              <td class="tdd1">{{contact194.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Tiruchendur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact195 in contiruchendur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact195.candidatename}}</td>
+              <td class="tdd1">{{contact195.partyname}}</td>
+              <td class="tdd1">{{contact195.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                 
+
+
+
+        <div ng-switch-when="Vilathikulam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact196 in convilathikulam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact196.candidatename}}</td>
+              <td class="tdd1">{{contact196.partyname}}</td>
+              <td class="tdd1">{{contact196.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Colachal">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact197 in concolachal"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact197.candidatename}}</td>
+              <td class="tdd1">{{contact197.partyname}}</td>
+              <td class="tdd1">{{contact197.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Kanniyakumari">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact198 in conkanniyakumari"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact198.candidatename}}</td>
+              <td class="tdd1">{{contact198.partyname}}</td>
+              <td class="tdd1">{{contact198.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                                                                                                             
+
+
+
+      <div ng-switch-when="Killiyoor">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact199 in conkilliyoor"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact199.candidatename}}</td>
+              <td class="tdd1">{{contact199.partyname}}</td>
+              <td class="tdd1">{{contact199.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+
+      <div ng-switch-when="Nagercoil">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact200 in connagercoil"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact200.candidatename}}</td>
+              <td class="tdd1">{{contact200.partyname}}</td>
+              <td class="tdd1">{{contact200.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Padmanabhapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact201 in conpadmanabhapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact201.candidatename}}</td>
+              <td class="tdd1">{{contact201.partyname}}</td>
+              <td class="tdd1">{{contact201.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Vilavancode">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact202 in convilavancode"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact202.candidatename}}</td>
+              <td class="tdd1">{{contact202.partyname}}</td>
+              <td class="tdd1">{{contact202.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Bargur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact203 in conbargur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact203.candidatename}}</td>
+              <td class="tdd1">{{contact203.partyname}}</td>
+              <td class="tdd1">{{contact203.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Hosur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact204 in conhosur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact204.candidatename}}</td>
+              <td class="tdd1">{{contact204.partyname}}</td>
+              <td class="tdd1">{{contact204.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+          <div ng-switch-when="Krishnagiri">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact205 in conkrishnagiri"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact205.candidatename}}</td>
+              <td class="tdd1">{{contact205.partyname}}</td>
+              <td class="tdd1">{{contact205.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Thalli">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact206 in conthalli"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact206.candidatename}}</td>
+              <td class="tdd1">{{contact206.partyname}}</td>
+              <td class="tdd1">{{contact206.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+       <div ng-switch-when="Uthangarai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact207 in conuthangarai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact207.candidatename}}</td>
+              <td class="tdd1">{{contact207.partyname}}</td>
+              <td class="tdd1">{{contact207.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Veppanahalli">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact208 in conveppanahalli"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact208.candidatename}}</td>
+              <td class="tdd1">{{contact208.partyname}}</td>
+              <td class="tdd1">{{contact208.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+
+       <div ng-switch-when="Ariyalur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact209 in conariyalur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact209.candidatename}}</td>
+              <td class="tdd1">{{contact209.partyname}}</td>
+              <td class="tdd1">{{contact209.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+       <div ng-switch-when="Jayankondam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact210 in conjayankondam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact210.candidatename}}</td>
+              <td class="tdd1">{{contact210.partyname}}</td>
+              <td class="tdd1">{{contact210.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Avinashi">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact211 in conavinashi"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact211.candidatename}}</td>
+              <td class="tdd1">{{contact211.partyname}}</td>
+              <td class="tdd1">{{contact211.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Dharapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact212 in condharapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact212.candidatename}}</td>
+              <td class="tdd1">{{contact212.partyname}}</td>
+              <td class="tdd1">{{contact212.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Kangayam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact213 in conkangayam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact213.candidatename}}</td>
+              <td class="tdd1">{{contact213.partyname}}</td>
+              <td class="tdd1">{{contact213.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+        <div ng-switch-when="Madathukulam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact214 in conmadathukulam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact214.candidatename}}</td>
+              <td class="tdd1">{{contact214.partyname}}</td>
+              <td class="tdd1">{{contact214.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+        <div ng-switch-when="Palladam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact215 in conpalladam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact215.candidatename}}</td>
+              <td class="tdd1">{{contact215.partyname}}</td>
+              <td class="tdd1">{{contact215.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+
+        <div ng-switch-when="Tiruppurnorth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact216 in contiruppurnorth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact216.candidatename}}</td>
+              <td class="tdd1">{{contact216.partyname}}</td>
+              <td class="tdd1">{{contact216.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Tiruppursouth">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact217 in contiruppursouth"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact217.candidatename}}</td>
+              <td class="tdd1">{{contact217.partyname}}</td>
+              <td class="tdd1">{{contact217.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>    
+
+
+
+        <div ng-switch-when="Udumalaipettai">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact218 in conudumalaipettai"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact218.candidatename}}</td>
+              <td class="tdd1">{{contact218.partyname}}</td>
+              <td class="tdd1">{{contact218.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                                                                                                        
+
+
+
+        <div ng-switch-when="Annanagar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact219 in conannanagar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact219.candidatename}}</td>
+              <td class="tdd1">{{contact219.partyname}}</td>
+              <td class="tdd1">{{contact219.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Chepaukkam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact220 in conchepaukkam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact220.candidatename}}</td>
+              <td class="tdd1">{{contact220.partyname}}</td>
+              <td class="tdd1">{{contact220.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Dr.Radhakrishnannagar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact221 in conrknagar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact221.candidatename}}</td>
+              <td class="tdd1">{{contact221.partyname}}</td>
+              <td class="tdd1">{{contact221.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Egmore">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact222 in conegmore"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact222.candidatename}}</td>
+              <td class="tdd1">{{contact222.partyname}}</td>
+              <td class="tdd1">{{contact222.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Harbour">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact223 in conharbour"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact223.candidatename}}</td>
+              <td class="tdd1">{{contact223.partyname}}</td>
+              <td class="tdd1">{{contact223.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+        <div ng-switch-when="Kolathur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact224 in conkolathur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact224.candidatename}}</td>
+              <td class="tdd1">{{contact224.partyname}}</td>
+              <td class="tdd1">{{contact224.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+          <div ng-switch-when="Mylapore">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact225 in conmylapore"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact225.candidatename}}</td>
+              <td class="tdd1">{{contact225.partyname}}</td>
+              <td class="tdd1">{{contact225.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div> 
+
+
+
+       <div ng-switch-when="Perambur">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact226 in conperambur"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact226.candidatename}}</td>
+              <td class="tdd1">{{contact226.partyname}}</td>
+              <td class="tdd1">{{contact226.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+        <div ng-switch-when="Royapuram">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact227 in conroyapuram"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact227.candidatename}}</td>
+              <td class="tdd1">{{contact227.partyname}}</td>
+              <td class="tdd1">{{contact227.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+
+
+        <div ng-switch-when="Saidapet">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact228 in consaidapet"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact228.candidatename}}</td>
+              <td class="tdd1">{{contact228.partyname}}</td>
+              <td class="tdd1">{{contact228.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+       <div ng-switch-when="Thiruvikanagar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact229 in conthirukikanagar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact229.candidatename}}</td>
+              <td class="tdd1">{{contact229.partyname}}</td>
+              <td class="tdd1">{{contact229.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>   
+
+
+
+
+       <div ng-switch-when="Thiyagarayanagar">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact230 in conthiyagarayanagar"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact230.candidatename}}</td>
+              <td class="tdd1">{{contact230.partyname}}</td>
+              <td class="tdd1">{{contact230.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                          
+
+
+
+      <div ng-switch-when="Thousandlights">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact231 in conthousandlights"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact231.candidatename}}</td>
+              <td class="tdd1">{{contact231.partyname}}</td>
+              <td class="tdd1">{{contact231.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>
+
+
+
+       <div ng-switch-when="Velachery">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact232 in convelachery"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact232.candidatename}}</td>
+              <td class="tdd1">{{contact232.partyname}}</td>
+              <td class="tdd1">{{contact232.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+       <div ng-switch-when="Villivakkam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact233 in convillivakkam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact233.candidatename}}</td>
+              <td class="tdd1">{{contact233.partyname}}</td>
+              <td class="tdd1">{{contact233.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>  
+
+
+
+      <div ng-switch-when="Virugampakkam">
+       <section class="contentleftre1">   
+        
+        <div ng-repeat="contact234 in convirugampakkam"> 
+         <table class="tab1">
+          <tr><td class="tdd1">{{contact234.candidatename}}</td>
+              <td class="tdd1">{{contact234.partyname}}</td>
+              <td class="tdd1">{{contact234.votescount}}</td>
+          </tr><hr></table></div></section>
+       <aside class="contentrightre1">
+          <h4 style="color: green">Leading <img src="img/uparrow.jpeg" width="30px" height="20px"></h4>  <br>
+           <h4 style="color: red"> <img style="padding-left: 40px" src="img/downarrow.jpeg" width="30px" height="20px"></h4> </aside> </div>                                          
+
+
+
+
+
+             
+
+      </div></div>
+
+       
+
+  
+ </div>
+
+
+<div style="height: 10px;background-color: white;">
+  </div>
+
+
+<script src="controller/controljs.js" type="text/javascript"></script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+
+
+
+        
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
