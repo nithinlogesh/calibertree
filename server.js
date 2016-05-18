@@ -9,8 +9,10 @@ var mongojs = require('mongojs');
 
 
 //Database connect to remote server
-var db = mongojs('calibertree:calibertree@ec2-52-38-247-61.us-west-2.compute.amazonaws.com:27017/electioncentre', ['ecelectiontn']);
 
+// var db = mongojs('calibertree:calibertree@ec2-52-38-247-61.us-west-2.compute.amazonaws.com:27017/electioncentre', ['ecelectiontn']);
+
+var db = mongojs('calibertree:calibertree@52.39.209.42:27017/electioncentre', ['ecelectiontn']);
 
 //local terminal  var db = mongojs('electioncentre', ['ecelectiontn']);
 
