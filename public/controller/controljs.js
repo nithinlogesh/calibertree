@@ -49,9 +49,8 @@ sampleApp.config(['$routeProvider',
       }).
         
         
-
       otherwise({
-        redirectTo: '/home'
+        redirectTo: '/Electionresult'
       });
 }]);
 

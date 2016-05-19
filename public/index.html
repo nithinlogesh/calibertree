@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-    
+  <title>
+    <meta name="keywords" content="Tamilnadu Assembly Election - 2016" />
+<meta name="description" content="Tamilnadu Assembly Election - 2016" />
+
+
+
+  </title>
+  <meta name="description" content="Tamilnadu Assembly Election - 2016">
+    <meta name="keywords" content="Tamilnadu Assembly Election - 2016" />
+<meta name="description" content="Tamilnadu Assembly Election - 2016" />
+
    <link rel="stylesheet" type="text/css" href="style.css">
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -16,18 +25,49 @@
         
      <header>
               
+                    
           <section class="dropdown">
-                  <i id="i" class="fa fa-bars" style="font-size:30px;"></i>
-                
-                <nav class="dropdown-content">
+                     
+             <i onclick="myFunction()"  id="dropbtn" class="fa fa-bars" style="font-size:30px;"></i>
+         
+           <nav id="myDropdown" class="dropdown-content">
+         
                 <ul id="menu">
                   <li>  <a class="hi" href="#home">Home</a> </li>
                    <li> <a class="hi" href="#Electioncandidates">Electioncandidates-2016</a> </li>
                    <li> <a class="hi" href="#Electionresult">Electionresult-2016</a> </li>
                    <li> <a class="hi" href="#Contact">Contactus</a>  </li> </ul>
                 </nav> 
-                
-         </section>
+
+           </section>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+      
          
          <aside class="logotext">
                    <h3 class="h3">ELECTLORE</h3>
