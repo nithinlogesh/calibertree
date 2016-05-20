@@ -50,7 +50,7 @@ sampleApp.config(['$routeProvider',
         
         
       otherwise({
-        redirectTo: '/Electionresult'
+        redirectTo: '/home'
       });
 }]);
 
