@@ -1,0 +1,125 @@
+
+
+
+    
+  
+
+  
+header
+{width: 100%;color: white;height: 65px; background: #8E1111;position: relative; }
+
+a.hi{color: #fff;text-decoration: none;}
+
+
+
+
+
+#dropbtn { background-color: #8E1111; color: white; padding: 5px; border: none; cursor: pointer;
+          font-size:10px; }
+#dropbtn:hover, #dropbtn:focus {background-color: #650909;}
+
+.dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 10px;padding-left: 10px; }
+
+.dropdown-content {display: none; position: absolute; background-color: #821E1E;
+ /*   min-width: 160px */width: 450px ; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);padding: 0px;}
+
+.dropdown-content a { text-decoration: none; display: inline;color: white;}
+.dropdown a:hover {background-color: ;}
+
+.show {display:block;}
+
+ul#menu li {display:inline; padding-left: 0px;}
+ul#menu{list-style-type: none;}
+
+
+
+.logotext{float: left;width: 95%;padding-left: 40px;padding-top: 7px;}
+.logotext .h3{font-size: 20px;}
+
+
+
+
+  .banner{width: 100%;height: 90px;background-image: url("img/cm480.jpg");}
+
+  .bannerleft{width: 100%;visibility: hidden;}
+  .bannerleft .bannerleft1{padding-left: 0px;visibility: hidden;}
+  .bannerleft .bannerleft2{padding: 0px;padding-left: 0px;visibility: hidden;} 
+  .bannerright{width: 100%;padding: 0px;visibility: hidden;}
+ 
+  #containerwrap{width: 100%;height: auto;}
+
+  .text1{width: 100%;} .text1 h3{font-size: 1.6em}
+   .text2{width: 100%;} .text2 h3{font-size: 1.6em}
+
+           
+   .text3{width: 100%; height: 300px;margin: 0px auto;}   
+   .text3left{width: 100%;float: left;height: 220px}
+   .text3left .party1{padding-left: 40px;padding-top: 5px;}
+   .text3left .party1 p{font-size: 1.6em;color: #0099FF}
+   .text3left .party2{padding-left: 100px; padding-top: 10px;}
+   .text3left .party2 .p1{font-size: 1.4em;padding-left: 30px;}.text3left .party2 .p2{color: #0099FF}
+   .text3left .party2 .p3{color: #999999}.text3left .party2 .p4{}
+   .text3left .party3{padding-left: 100px}
+   .text3left .party3 .p5{color: #999999}
+  
+
+  .text3right{width: 100%;padding-left: 30px;padding-right: 30px;height: 300px;}
+  .text3right img.img1{width: 400px;height: 280px;padding-top: 20px;}
+
+ 
+  .foot{width: 100%;}
+  .footleft{width: 100%;}
+  .footright{width: 100%;}
+
+  .contacttext{width: 100%;padding: 20px;}
+  .contacts1{width: 100%;padding-left: 0px;}
+  .contacts1 h3{font-size: 1.6em;color: #0099FF}
+  .contacts2{width: 100%;padding-left: 10px;padding-right: 10px;}
+  
+
+
+.candidatetext{width: 100%;padding: 10px;}
+.ecandidate0{width: 100%;padding-right: 20px;padding-left: 20px}
+.ecandidate1{width: 100%;padding-left: 30px;}.ecandidate1 h3{color: #0099FF;font-size: 1.6em;}
+.ecandidate2{width: 100%;padding-left: 50px;}
+.ecandidates3{width: 100%;height: auto;}
+
+.ecandidate4{padding-top: 10px;width: 100%;height: 500px}
+.ecandidate40{width: 100%}
+.ecandidate40 .td1{padding-top: 10px;padding-left: 0px;width: 50%;height: auto;color: #686767;font-size: 1.0em }
+ .ecandidate40 .td2{padding-top: 10px;padding-left: 0px;width: 50%;height: auto;color: #686767;font-size: 1.0em}
+
+.contentleft1{width: 30%; height: 500px;float: left;padding-top: 10px;padding-left: 20px;}
+.contentleft1 .img1{padding-top: 20px;}
+.contentleft1 .img2{padding-top: 10px;}
+.contentleft1 .img3{padding-top: 20px;}
+.contentleft1 .img4{padding-top: 20px;}
+.contentleft1 .img5{padding-top: 20px;}
+.contentleft1 .img6{padding-top: 20px;}
+.contentright1{width: 70%; height: 500px; float: left;padding-left: 20px;}
+
+
+
+ .ecandidatere1{width: 100%}
+.ecandidatere1 h4{color: #0099FF; text-align: center;text-decoration: underline;}
+
+.ecandidatere1 ul#menu1 li {display:inline;padding: 10px;}
+.ecandidatere1 ul#menu1 li a{color: #606061}
+.ecandidatere1 ul#menu1{list-style-type: none;padding-top: 10px;padding-left: 260px;}
+
+.ecandidatere2{width: 100%;padding-left: 30px;height: 500px;padding-top: 10px;padding-right: 10px;}
+.ecandidatere2 h4{color: #0099FF; padding-left: 10px;text-decoration: underline;}
+.ecandidatere2 table.tab, td.tdd, th.thh { border: 1px solid black; text-align: center;}
+.ecandidatere2 table.tab, td.tdd{text-align: left;}
+.ecandidatere2 table.tab { border-collapse: collapse; width: 100%;}
+.ecandidatere2 th.thh {height: 50px; }
+
+
+.ecandidateree2{padding-left: 300px;padding-top: 10px;height: auto;}
+.ecandidatesree3 {padding-left: 20px;padding-right: 10%;height:400px;width: 100%}
+.ecandidatesree3 .contentleftre1{height: 400px;width: 80%;float: left;}
+.ecandidatesree3 .contentleftre1 table.tab1, td.tdd1{width: 80%;padding-left: 20px;}
+
+.ecandidatesree3 .contentrightre1{height: 400px;width: 20%;float: left;padding-top: 10px;}
+
+ 
