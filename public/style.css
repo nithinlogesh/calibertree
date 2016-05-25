@@ -15,7 +15,7 @@ a.hi{color: #fff;text-decoration: none;}
 
 
 
- #dropbtn { background-color: #8E1111; color: white; padding: 10px; border: none; cursor: pointer; }
+ #dropbtn { background-color: #8E1111; color: white; padding: 10px; border: none; cursor: pointer;font-size:30px; }
 #dropbtn:hover, #dropbtn:focus {background-color: #650909;}
 
 .dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 10px;padding-left: 20px; }
@@ -152,7 +152,8 @@ a.hi{color: #fff;text-decoration: none;}
 
 
 
-#dropbtn { background-color: #8E1111; color: white; padding: 10px; border: none; cursor: pointer; }
+#dropbtn { background-color: #8E1111; color: white; padding: 5px; border: none; cursor: pointer;
+          font-size:10px; }
 #dropbtn:hover, #dropbtn:focus {background-color: #650909;}
 
 .dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 10px;padding-left: 10px; }
@@ -288,7 +289,8 @@ ul#menu{list-style-type: none;}
 a.hi{color: #fff;text-decoration: none;}
 
 
-#dropbtn { background-color: #8E1111; color: white; padding: 10px; border: none; cursor: pointer; }
+#dropbtn { background-color: #8E1111; color: white; padding: 5px; border: none; cursor: pointer; 
+           font-size:15px;}
 #dropbtn:hover, #dropbtn:focus {background-color: #650909;}
 
 .dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 20px;padding-left: 10px; }
@@ -436,7 +438,8 @@ a.hi{color: #fff;text-decoration: none;}
 
 
 
-#dropbtn { background-color: #8E1111; color: white; padding: 10px; border: none; cursor: pointer; }
+#dropbtn { background-color: #8E1111; color: white; padding: 10px; border: none; cursor: pointer;
+           font-size:15px; }
 #dropbtn:hover, #dropbtn:focus {background-color: #650909;}
 
 .dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 20px;padding-left: 10px; }
@@ -585,7 +588,8 @@ ul#menu{list-style-type: none;}
 
 a.hi{color: #fff;text-decoration: none;}
 
-.dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 20px;padding-left: 10px;}
+.dropdown { position: relative; display: inline; float: left;width: 5%;padding-top: 20px;padding-left: 10px;
+           font-size:17px;}
 
 .dropdown-content { display: none; position: absolute; background-color: #821E1E;
   (  min-width: 160px ) width: 570px ; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);padding: 0px; }
